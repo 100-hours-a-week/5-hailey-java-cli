@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71191a77-5716-445a-90f7-1372e79c6120" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lotto/LottoNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lotto/LottoResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lotto/UserInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lotto/UserPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lotto/BonusLottoNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lotto/Number.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lotto/LottoNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lotto/LottoNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lotto/LottoResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lotto/LottoResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lotto/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lotto/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lotto/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lotto/UserNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lotto/UserPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lotto/UserPoint.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +62,26 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lotto.Main" />
+      <module name="java-cli.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lotto.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -79,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1716126464156</updated>
       <workItem from="1716126465148" duration="6762000" />
-      <workItem from="1716164630268" duration="28383000" />
+      <workItem from="1716164630268" duration="83748000" />
     </task>
     <servers />
   </component>
