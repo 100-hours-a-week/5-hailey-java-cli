@@ -1,13 +1,13 @@
-package com.lotto;
+package com.lotto.number;
 
-public class BonusLottoNumber extends LottoNumber{
+public class BonusLottoNumber extends LottoNumber {
 
     private int bonusNumber;
     private boolean isBonusGenerated = false;
 
     @Override
     public int[] createLottoNumber() {
-        super.createLottoNumber(); // 부모 클래스의 메서드 호출
+        super.createLottoNumber(); // 부모 클래스 메서드 호출
 
         // 보너스 번호 생성
         if (!isBonusGenerated) { // 보너스 번호가 생성되지 않은 경우에만 생성

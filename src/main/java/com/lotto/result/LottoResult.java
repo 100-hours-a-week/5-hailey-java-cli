@@ -1,4 +1,4 @@
-package com.lotto;
+package com.lotto.result;
 
 public class LottoResult{
 
@@ -16,6 +16,7 @@ public class LottoResult{
 
     public boolean bonusCheckResult(int[] numbers, int[] userArray) {
         if (numbers[6] == userArray[6]) {
+            System.out.println("보너스 번호를 맞추셨습니다!!!!!!");
             return true;
         } else {
             return false;

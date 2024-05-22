@@ -1,4 +1,4 @@
-package com.lotto;
+package com.lotto.result;
 
 public class UserPoint {
     int point = 40;

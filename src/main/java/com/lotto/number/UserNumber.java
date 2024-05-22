@@ -1,4 +1,4 @@
-package com.lotto;
+package com.lotto.number;
 
 import java.util.Scanner;
 

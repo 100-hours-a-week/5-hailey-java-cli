@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71191a77-5716-445a-90f7-1372e79c6120" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lotto/BonusLottoNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lotto/Number.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lotto/controller/GameController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lotto/view/View.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lotto/LottoNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lotto/LottoNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lotto/LottoResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lotto/LottoResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lotto/BonusLottoNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lotto/number/BonusLottoNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lotto/LottoNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lotto/number/LottoNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lotto/LottoResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lotto/result/LottoResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lotto/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lotto/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lotto/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lotto/UserNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lotto/UserPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lotto/UserPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lotto/Number.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lotto/number/Number.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lotto/UserNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lotto/number/UserNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lotto/UserPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lotto/result/UserPoint.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +60,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "/Users/choihyeonhee/IdeaProjects/java-cli/src/main/java/com/lotto/Main.java",
-    "settings.editor.selected.configurable": "editor.preferences.import",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -68,7 +70,7 @@
       <module name="java-cli.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lotto.*" />
+          <option name="PATTERN" value="com.lotto.view.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,7 +101,9 @@
       <option name="presentableId" value="Default" />
       <updated>1716126464156</updated>
       <workItem from="1716126465148" duration="6762000" />
-      <workItem from="1716164630268" duration="83748000" />
+      <workItem from="1716164630268" duration="83958000" />
+      <workItem from="1716337189368" duration="942000" />
+      <workItem from="1716368745628" duration="9069000" />
     </task>
     <servers />
   </component>

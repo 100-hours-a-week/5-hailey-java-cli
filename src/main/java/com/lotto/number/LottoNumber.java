@@ -1,10 +1,10 @@
-package com.lotto;
+package com.lotto.number;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class LottoNumber extends Number{
+public class LottoNumber extends Number {
 
     List<Integer> list = new ArrayList<>();
     Random random = new Random();
