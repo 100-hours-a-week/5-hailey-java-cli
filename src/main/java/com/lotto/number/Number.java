@@ -1,7 +1,7 @@
 package com.lotto.number;
 
 public class Number {
-    int[] array = new int[6];
-    int[] bonusArray = new int[7];
+    public int[] array = new int[6];
+    public int[] bonusArray = new int[7];
 
 }

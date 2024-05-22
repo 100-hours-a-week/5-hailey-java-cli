@@ -30,9 +30,11 @@ public class GameController {
             int menu = view.getMenuChoice();
             switch (menu) {
                 case 1:
+                    view.printMessage("*** 1부터 45 중에 선택해주세요. (중복x) ***");
                     playLottoGame();
                     break;
                 case 2:
+                    view.printMessage("*** 1부터 45 중에 선택해주세요. (중복x, 보너스 번호는 중복될 수 있습니다.) ***");
                     playBonusLottoGame();
                     break;
                 case 3:
