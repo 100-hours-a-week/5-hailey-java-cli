@@ -11,6 +11,7 @@ public class GameController {
 
     private static final int LOTTO_NECESSARY_POINT = 10;
     private static final int BONUS_NECESSARY_POINT = 20;
+    private boolean running = true;
 
     private View view;
     private UserNumber userNumber;
@@ -29,16 +30,14 @@ public class GameController {
     }
 
     public void startGame() {
-        while (true) {
+        while (running) {
             view.printMenu(userPoint.getPoint());
             int menu = view.getMenuChoice();
             switch (menu) {
                 case 1:
-                    view.printMessage("*** 1부터 45 중에 선택해주세요. (중복x) ***");
                     playLottoGame();
                     break;
                 case 2:
-                    view.printMessage("*** 1부터 45 중에 선택해주세요. (중복x, 보너스 번호는 중복될 수 있습니다.) ***");
                     playBonusLottoGame();
                     break;
                 case 3:
@@ -46,23 +45,25 @@ public class GameController {
                     break;
                 case 4:
                     view.printMessage("See you again~~");
-                    System.exit(0);
+                    running = false;
                     break;
                 default:
                     view.printMessage("올바른 메뉴를 선택하세요.");
                     break;
             }
         }
+        view.printMessage("게임이 종료되었습니다.");
     }
 
     private void playLottoGame() {
         if (userPoint.getPoint() < LOTTO_NECESSARY_POINT) {
             view.printMessage("포인트가 부족합니다. 게임을 종료합니다.");
             lottoNumber.getLottoNumber();
-            System.exit(0);
+            running = false;
+            return;
         }
 
-        view.printMessage("게임 시작");
+        view.printMessage("*** 1부터 45 중에 선택해주세요. (중복x) ***");
 
         int point = userPoint.usePoint();
         view.printMessage("남은 포인트: " + point);
@@ -78,10 +79,11 @@ public class GameController {
         if (userPoint.getPoint() < BONUS_NECESSARY_POINT) {
             view.printMessage("포인트가 부족합니다. 게임을 종료합니다.");
             bonusLottoNumber.getLottoNumber();
-            System.exit(0);
+            running = false;
+            return;
         }
 
-        view.printMessage("게임 시작");
+        view.printMessage("*** 1부터 45 중에 선택해주세요. (중복x, 보너스 번호는 중복될 수 있습니다.) ***");
 
         int doublePoint = userPoint.useDoublePoint();
         view.printMessage("현재 남은 포인트: " + doublePoint);
