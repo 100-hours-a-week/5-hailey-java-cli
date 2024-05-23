@@ -33,23 +33,27 @@ public class GameController {
         while (running) {
             view.printMenu(userPoint.getPoint());
             int menu = view.getMenuChoice();
-            switch (menu) {
-                case 1:
-                    playLottoGame();
-                    break;
-                case 2:
-                    playBonusLottoGame();
-                    break;
-                case 3:
-                    view.printLottoExplanation();
-                    break;
-                case 4:
-                    view.printMessage("See you again~~");
-                    running = false;
-                    break;
-                default:
-                    view.printMessage("올바른 메뉴를 선택하세요.");
-                    break;
+            try {
+                switch (menu) {
+                    case 1:
+                        playLottoGame();
+                        break;
+                    case 2:
+                        playBonusLottoGame();
+                        break;
+                    case 3:
+                        view.printLottoExplanation();
+                        break;
+                    case 4:
+                        view.printMessage("See you again~~");
+                        running = false;
+                        break;
+                    default:
+                        view.printMessage("올바른 메뉴를 선택하세요.");
+                        break;
+                }
+            } catch (IllegalArgumentException e) {
+                view.printMessage("에러: " + e.getMessage());
             }
         }
         view.printMessage("게임이 종료되었습니다.");
