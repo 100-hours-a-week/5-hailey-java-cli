@@ -8,6 +8,10 @@ import com.lotto.number.UserNumber;
 import com.lotto.view.View;
 
 public class GameController {
+
+    private static final int LOTTO_NECESSARY_POINT = 10;
+    private static final int BONUS_NECESSARY_POINT = 20;
+
     private View view;
     private UserNumber userNumber;
     private LottoNumber lottoNumber;
@@ -52,7 +56,7 @@ public class GameController {
     }
 
     private void playLottoGame() {
-        if (userPoint.getPoint() < 10) {
+        if (userPoint.getPoint() < LOTTO_NECESSARY_POINT) {
             view.printMessage("포인트가 부족합니다. 게임을 종료합니다.");
             lottoNumber.getLottoNumber();
             System.exit(0);
@@ -71,7 +75,7 @@ public class GameController {
     }
 
     private void playBonusLottoGame() {
-        if (userPoint.getPoint() < 20) {
+        if (userPoint.getPoint() < BONUS_NECESSARY_POINT) {
             view.printMessage("포인트가 부족합니다. 게임을 종료합니다.");
             bonusLottoNumber.getLottoNumber();
             System.exit(0);
