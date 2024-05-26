@@ -9,7 +9,9 @@ public class LottoNumber extends Number {
     List<Integer> list = new ArrayList<>();
     Random random = new Random();
 
-    public int[] createLottoNumber() {
+    public String[] createLottoNumber() {
+        list.clear();
+
         while (list.size() < 6) {
             int number = random.nextInt(45) + 1;
 
@@ -19,7 +21,7 @@ public class LottoNumber extends Number {
         }
 
         for (int i = 0; i < list.size(); i++) {
-            array[i] = list.get(i);
+            array[i] = String.valueOf(list.get(i));
         }
 
         return array;
@@ -27,8 +29,8 @@ public class LottoNumber extends Number {
 
     public void getLottoNumber() {
         System.out.println("이번 로또 번호는 ~~~");
-        for (int num : array) {
-            System.out.print(num + " ");
+        for (int i=0; i<6; i++) {
+            System.out.print(array[i] + " ");
         }
         System.out.println();
     }

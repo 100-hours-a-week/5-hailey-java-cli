@@ -6,7 +6,7 @@ public class BonusLottoNumber extends LottoNumber {
     private boolean isBonusGenerated = false;
 
     @Override
-    public int[] createLottoNumber() {
+    public String[] createLottoNumber() {
         super.createLottoNumber(); // 부모 클래스 메서드 호출
 
         // 보너스 번호 생성
@@ -17,7 +17,7 @@ public class BonusLottoNumber extends LottoNumber {
 
         // 기존 배열에 보너스 번호를 추가하기 위해 새로운 배열 생성
         System.arraycopy(array, 0, bonusArray, 0, array.length); // 기존 배열 복사
-        bonusArray[6] = bonusNumber; // 마지막에 보너스 번호 추가
+        bonusArray[6] = String.valueOf(bonusNumber); // 마지막에 보너스 번호 추가
 
         return bonusArray;
     }

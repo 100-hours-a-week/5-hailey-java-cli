@@ -72,8 +72,8 @@ public class GameController {
         int point = userPoint.usePoint();
         view.printMessage("남은 포인트: " + point);
 
-        int[] numbers = lottoNumber.createLottoNumber();
-        int[] userArray = userNumber.choose();
+        String[] numbers = lottoNumber.createLottoNumber();
+        String[] userArray = userNumber.choose();
 
         int cnt = lottoResult.checkResult(numbers, userArray);
         userPoint.winningResult(cnt); // 포인트 업데이트
@@ -92,8 +92,8 @@ public class GameController {
         int doublePoint = userPoint.useDoublePoint();
         view.printMessage("현재 남은 포인트: " + doublePoint);
 
-        int[] bonusNumbers = bonusLottoNumber.createLottoNumber();
-        int[] userBonusArray = userNumber.bonusChoose();
+        String[] bonusNumbers = bonusLottoNumber.createLottoNumber();
+        String[] userBonusArray = userNumber.bonusChoose();
 
         int bonusCnt = lottoResult.checkResult(bonusNumbers, userBonusArray);
         boolean bonusCheck = lottoResult.bonusCheckResult(bonusNumbers, userBonusArray);
