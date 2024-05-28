@@ -24,9 +24,9 @@ public class ResultGenerator implements Runnable{
                 if (lottoNumbers != null && lottoNumbers.length == 6) {
                     for (String[] userArray : userNumber.getUsers()) {
                         int count = lottoResult.checkResult(lottoNumbers, userArray);
-                        System.out.println(userArray[0] + "님의 결과: " + count + "개 맞추셨습니다.");
+                        System.out.println(userArray[0] + "(" + userArray[1] + ")" + "님의 결과: " + count + "개 맞추셨습니다.");
                     }
-                    userNumber.clearUsers();
+                    userNumber.clearUsers(); //유저 기록 초기화
                 }
             }
 
