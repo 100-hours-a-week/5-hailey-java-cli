@@ -1,37 +1,24 @@
 package com.lotto.controller;
 
-import com.lotto.result.LottoResult;
-import com.lotto.result.UserPoint;
-import com.lotto.number.BonusLottoNumber;
-import com.lotto.number.LottoNumber;
+import com.lotto.number.LottoGenerator;
 import com.lotto.number.UserNumber;
+import com.lotto.result.ResultGenerator;
 import com.lotto.view.View;
 
 public class GameController {
-
-    private static final int LOTTO_NECESSARY_POINT = 10;
-    private static final int BONUS_NECESSARY_POINT = 20;
     private boolean running = true;
 
     private View view;
     private UserNumber userNumber;
-    private LottoNumber lottoNumber;
-    private BonusLottoNumber bonusLottoNumber;
-    private UserPoint userPoint;
-    private LottoResult lottoResult;
 
-    public GameController(View view) {
+    public GameController(View view, UserNumber userNumber) {
         this.view = view;
-        this.userNumber = new UserNumber();
-        this.lottoNumber = new LottoNumber();
-        this.bonusLottoNumber = new BonusLottoNumber();
-        this.userPoint = new UserPoint();
-        this.lottoResult = new LottoResult();
+        this.userNumber = userNumber;
     }
 
     public void startGame() {
         while (running) {
-            view.printMenu(userPoint.getPoint());
+            view.printMenu();
             int menu = view.getMenuChoice();
             try {
                 switch (menu) {
@@ -39,14 +26,12 @@ public class GameController {
                         playLottoGame();
                         break;
                     case 2:
-                        playBonusLottoGame();
-                        break;
-                    case 3:
                         view.printLottoExplanation();
                         break;
-                    case 4:
+                    case 3:
                         view.printMessage("See you again~~");
                         running = false;
+                        stopAllThreads();
                         break;
                     default:
                         view.printMessage("올바른 메뉴를 선택하세요.");
@@ -60,46 +45,15 @@ public class GameController {
     }
 
     private void playLottoGame() {
-        if (userPoint.getPoint() < LOTTO_NECESSARY_POINT) {
-            view.printMessage("포인트가 부족합니다. 게임을 종료합니다.");
-            lottoNumber.getLottoNumber();
-            running = false;
-            return;
-        }
 
         view.printMessage("*** 1부터 45 중에 선택해주세요. (중복x) ***");
 
-        int point = userPoint.usePoint();
-        view.printMessage("남은 포인트: " + point);
+        userNumber.choose();
 
-        String[] numbers = lottoNumber.createLottoNumber();
-        String[] userArray = userNumber.choose();
-
-        int cnt = lottoResult.checkResult(numbers, userArray);
-        userPoint.winningResult(cnt); // 포인트 업데이트
     }
 
-    private void playBonusLottoGame() {
-        if (userPoint.getPoint() < BONUS_NECESSARY_POINT) {
-            view.printMessage("포인트가 부족합니다. 게임을 종료합니다.");
-            bonusLottoNumber.getLottoNumber();
-            running = false;
-            return;
-        }
-
-        view.printMessage("*** 1부터 45 중에 선택해주세요. (중복x, 보너스 번호는 중복될 수 있습니다.) ***");
-
-        int doublePoint = userPoint.useDoublePoint();
-        view.printMessage("현재 남은 포인트: " + doublePoint);
-
-        String[] bonusNumbers = bonusLottoNumber.createLottoNumber();
-        String[] userBonusArray = userNumber.bonusChoose();
-
-        int bonusCnt = lottoResult.checkResult(bonusNumbers, userBonusArray);
-        boolean bonusCheck = lottoResult.bonusCheckResult(bonusNumbers, userBonusArray);
-
-        userPoint.winningResult(bonusCnt); // 포인트 업데이트
-        userPoint.bonusPoint(bonusCheck);
+    private void stopAllThreads() {
+        LottoGenerator.stop();
+        ResultGenerator.stop();
     }
 }
-

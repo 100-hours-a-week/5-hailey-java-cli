@@ -35,5 +35,8 @@ public class LottoNumber extends Number {
         System.out.println();
     }
 
+    public String[] getArray() {
+        return array;
+    }
 
 }
